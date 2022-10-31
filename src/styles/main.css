@@ -233,6 +233,7 @@ footer.container {
   }
   .nav-active {
     border-bottom: 2px solid currentColor;
+    
   }
   .workshops {
     display: grid;
@@ -241,4 +242,6 @@ footer.container {
   form {
     width: 60%;
   }
+
+
 }
