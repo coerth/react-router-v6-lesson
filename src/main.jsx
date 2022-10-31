@@ -6,6 +6,8 @@ import Home from "./components/Home.jsx";
 import Workshops from "./components/Workshops";
 import Header from "./components/Header";
 import About from "./components/About.jsx";
+import Workshop from "./components/Workshop";
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
@@ -15,8 +17,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
                 <Routes>
                     <Route path="/" element={<Home titel="Welcome to SchoolHacks"/>}/>
-                    <Route path="workshops" element={<Workshops/>}/>
+                    <Route path="workshops" element={<Workshops/>}> 
+                        <Route path="workshop" element={<Workshop/>}/>                    
+                    </Route>
+
                     <Route path="about" element={<About/>}/>
+                    <Route className="not-found" path="*" element={<h1>404 Page not Found</h1>}/> 
                 </Routes>
 
                 <footer className="container">
