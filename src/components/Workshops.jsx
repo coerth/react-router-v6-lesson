@@ -1,5 +1,6 @@
 import {getWorkshops} from "../api";
 import {Link, Outlet} from "react-router-dom";
+import Workshop from "./Workshop";
 
 export default function Workshops() {
     const workshops = getWorkshops();
@@ -10,7 +11,10 @@ export default function Workshops() {
                 {workshops.map(work => (
                     <Link to={work.id}>
                         <li key={work.id}>
+                            <Link to={`/workshops/${work.id}`}>
                             {work.name}
+                            </Link>
+                           
                         </li>
                     </Link>
                 ))}
