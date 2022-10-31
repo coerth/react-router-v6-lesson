@@ -1,4 +1,4 @@
-import {Link, useParams} from "react-router-dom";
+import {Link, Outlet, useParams} from "react-router-dom";
 import {getWorkshop} from "../api";
 
 export default function Workshop() {
@@ -22,6 +22,7 @@ export default function Workshop() {
                     </li>
                 ))}
             </ul>
+            <Outlet/>
         </>
     );
 }
